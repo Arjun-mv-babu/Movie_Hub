@@ -1,0 +1,240 @@
+        /* Custom CSS for 5 cards per row */
+        .col-xxl-2-4 {
+          flex: 0 0 auto;
+          width: 20%;
+        }
+
+        .movie-app {
+          min-height: 100vh;
+          background: linear-gradient(135deg, #0f172a 0%, #581c87 50%, #0f172a 100%);
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .hero-section {
+          position: relative;
+          overflow: hidden;
+          padding: 100px 0;
+          margin-bottom: 50px;
+        }
+
+        .hero-title {
+          font-size: 4rem;
+          font-weight: 900;
+          letter-spacing: -0.02em;
+          margin-bottom: 1.5rem;
+        }
+
+        .gradient-text {
+          background: linear-gradient(135deg, #c084fc, #f472b6);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+
+        .hero-subtitle {
+          font-size: 1.3rem;
+          color: #d1d5db;
+          max-width: 600px;
+          margin: 0 auto;
+          line-height: 1.6;
+        }
+
+        .floating-element {
+          position: absolute;
+          border-radius: 50%;
+          opacity: 0.3;
+          animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-1 {
+          top: 10%;
+          left: 10%;
+          width: 80px;
+          height: 80px;
+          background: rgba(168, 85, 247, 0.3);
+          animation-delay: 0s;
+        }
+
+        .floating-2 {
+          bottom: 10%;
+          right: 10%;
+          width: 120px;
+          height: 120px;
+          background: rgba(244, 114, 182, 0.3);
+          animation-delay: 3s;
+        }
+
+        @keyframes float {
+          0%, 100% { transform: translateY(0px) scale(1); }
+          50% { transform: translateY(-20px) scale(1.1); }
+        }
+
+        .movie-card {
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(20px);
+          border-radius: 24px;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          overflow: hidden;
+          transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+          animation: fadeInUp 0.8s ease-out forwards;
+          opacity: 0;
+        }
+
+        .movie-card:hover {
+          transform: translateY(-10px) scale(1.02);
+          box-shadow: 0 25px 50px -12px rgba(168, 85, 247, 0.4);
+          border-color: rgba(168, 85, 247, 0.5);
+        }
+
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .movie-poster-container {
+          position: relative;
+          overflow: hidden;
+          height: 600px;
+        }
+
+        .movie-poster {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.7s ease;
+        }
+
+        .movie-card:hover .movie-poster {
+          transform: scale(1.1);
+        }
+
+        .movie-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%);
+          display: flex;
+          align-items: end;
+          justify-content: center;
+          padding: 20px;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .movie-card:hover .movie-overlay {
+          opacity: 1;
+        }
+
+        .trailer-btn {
+          background: rgba(255, 255, 255, 0.2);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          color: white;
+          padding: 12px 24px;
+          border-radius: 12px;
+          font-weight: 600;
+          transition: all 0.3s ease;
+        }
+
+        .trailer-btn:hover {
+          background: rgba(255, 255, 255, 0.3);
+          color: white;
+          transform: translateY(-2px);
+        }
+
+        .rating-badge {
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          background: #fbbf24;
+          color: #000;
+          padding: 6px 12px;
+          border-radius: 8px;
+          font-weight: 700;
+          font-size: 0.9rem;
+          display: flex;
+          align-items: center;
+        }
+
+        .movie-title {
+          color: white;
+          font-size: 1.3rem;
+          font-weight: 700;
+          transition: color 0.3s ease;
+        }
+
+        .movie-card:hover .movie-title {
+          color: #c084fc;
+        }
+
+        .detail-item {
+          display: flex;
+          align-items: flex-start;
+        }
+
+        .detail-icon {
+          font-size: 1rem;
+          flex-shrink: 0;
+        }
+
+        .detail-label {
+          color: #9ca3af;
+          font-size: 0.8rem;
+          display: block;
+          margin-bottom: 2px;
+        }
+
+        .detail-value {
+          color: #e5e7eb;
+          font-weight: 500;
+          font-size: 0.85rem;
+        }
+
+        .movie-footer {
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          color: #9ca3af;
+          font-size: 0.8rem;
+        }
+
+        .quality-badge {
+          background: rgba(168, 85, 247, 0.2);
+          color: #c084fc;
+          padding: 4px 12px;
+          border-radius: 12px;
+          font-size: 0.7rem;
+          font-weight: 600;
+        }
+
+        .empty-state {
+          color: #9ca3af;
+          max-width: 400px;
+          margin: 0 auto;
+        }
+
+        @media (max-width: 1400px) {
+          .col-xxl-2-4 {
+            width: 25%; /* 4 cards per row on xl screens */
+          }
+        }
+
+        @media (max-width: 768px) {
+          .hero-title {
+            font-size: 2.5rem;
+          }
+          
+          .hero-subtitle {
+            font-size: 1.1rem;
+          }
+          
+          .movie-poster-container {
+            height: 300px;
+          }
+        }

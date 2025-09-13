@@ -1,0 +1,29 @@
+/* Sidebar width styles */
+.sidebar-fixed-width {
+  width: 290px !important;
+}
+
+.sidebar-collapsed {
+  width: 150px !important;
+}
+
+/* Dashboard header with logout button on the right */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-title {
+  margin: 0;
+}
+
+.login-button {
+  margin-left: auto;
+}
+
+/* --- */
+.arjun {
+  right: 1790px
+}
